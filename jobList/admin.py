@@ -1,6 +1,6 @@
 from django.contrib import admin
-from .models import urlList
+from .models import UrlList
 
 
 # Register your models here.
-admin.site.register(urlList)
+admin.site.register(UrlList)

@@ -9,5 +9,12 @@
     </head>
     <body>
       Save them
+      {% for post in posts %}
+        <div>
+          <p>published: {{ post.published_date }}</p>
+          <h1><a href="">{{ post.title }}</a></h1>
+          <p>{{ posting_url.text}}</p>
+        </div>
+      {% endfor %}
     </body>
 </html>
