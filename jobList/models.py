@@ -4,6 +4,7 @@ from django.db import models
 from django.utils import timezone
 
 
+
 # Create your models here.
 class UrlList(models.Model):
     title = models.CharField(max_length = 200)
@@ -11,6 +12,7 @@ class UrlList(models.Model):
             default=timezone.now)
     posting_url = models.URLField(max_length = 200, default = '')
     posting_priority = models.BooleanField(default = False)
+    text = models.TextField(default=" ")
 
 
     def publish(self):
