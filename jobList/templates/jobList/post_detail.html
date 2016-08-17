@@ -1,0 +1,16 @@
+{% extends 'jobList/base.html' %}
+
+{% block content %}
+    <div class="post">
+        {% if post.published_date %}
+            <div class="date">
+                {{ post.published_date }}
+            </div>
+        {% endif %}
+        <h1>{{ post.title }}</h1>
+        <p><a href = {{ post.posting_url }} target="_blank">
+          {{ post.posting_url}}
+        </a></p>
+        <p>{{ post.text|linebreaksbr }}</p>
+    </div>
+{% endblock %}

@@ -7,8 +7,8 @@
       <div class = "date">
         <p> published: {{ post.created_date }}</p>
       </div>
-      <h1><a href= {{ post.posting_url }} target="_blank"> {{ post.title }}</a></h1>
-      <p>{{ posting_url.text}}</p>
+      <h1><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h1>
+      <p> <a href = {{ post.posting_url }} target="_blank">{{ post.posting_url}}</a></p>
       <p>{{ post.text|linebreaksbr }}</p>
     </div>
   {% endfor %}
